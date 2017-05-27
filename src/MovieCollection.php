@@ -16,4 +16,11 @@ class MovieCollection implements Countable
     {
         return count($this->collection);
     }
+
+    public function markAllAsWatched()
+    {
+        foreach ($this->collection as $movie){
+            $movie->watch();
+        }
+    }
 }
